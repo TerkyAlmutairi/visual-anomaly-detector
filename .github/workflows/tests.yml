@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run test suite
+        run: pytest tests/ -v
+
+      # Note: these tests use pretrained=False (random weights) so they run
+      # fast and offline -- they check pipeline logic, not feature quality.
+      # Run `python src/eval_harness.py` locally (needs internet to download
+      # pretrained ImageNet weights, ~270MB, first run only) for the fuller
+      # semantic detection/localization checks with real features.
