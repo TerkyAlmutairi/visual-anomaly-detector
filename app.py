@@ -23,7 +23,7 @@ st.set_page_config(page_title="PatchSense", page_icon="🔍", layout="centered")
 
 st.title("🔍 PatchSense")
 st.caption(
-    "A few-shot anomaly detector inspired by PatchCore (Roth et al., 2022). "
+    "PatchSense is a few-shot anomaly detector inspired by PatchCore (Roth et al., 2022). "
     "Upload photos of what 'normal' looks like, then upload a photo to check — "
     "no labeled defect data needed, and no fixed category of object."
 )
