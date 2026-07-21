@@ -1,4 +1,4 @@
-# Visual Anomaly Detector
+# PatchSense — Few-Shot Visual Anomaly Detector
 
 A few-shot visual anomaly detector: show it a handful of photos of what "normal" looks like, and it flags anything unlike them in a new photo — with a heatmap showing exactly where, and why.
 
